@@ -21,13 +21,13 @@ into the {body} of the default.hbs template --}}
 {{!< default}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
-{{#post}}
+{{#page}}
   {{> header background=feature_image}}
-{{/post}}
+{{/page}}
 
 <main class="main-wrap">
   {{!-- Everything inside the #post tags pulls data from the post --}}
-  {{#post}}
+  {{#page}}
     {{!-- Inject styles of the hero image to make it responsive --}}
     {{> hero background=feature_image}}
     <div class="m-hero__content" data-aos="fade-down">
@@ -48,7 +48,7 @@ into the {body} of the default.hbs template --}}
         </div>
       </div>
     </article>
-  {{/post}}
+  {{/page}}
 </main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
