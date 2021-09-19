@@ -24,9 +24,9 @@ into the {body} of the default.hbs template --}}
 {{> header background=@site.cover_image}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
-{{#page}}
+{{#post}}
   {{> header background=feature_image}}
-{{/page}}
+{{/post}}
 
 <main class="main-wrap">
   {{!-- Everything inside the #post tags pulls data from the post --}}
