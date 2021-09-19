@@ -23,15 +23,15 @@ into the {body} of the default.hbs template --}}
 {{!-- Special header.hbs partial to generate the <header> tag --}}
 {{> header background=@site.cover_image}}
 
-    {{!-- Main --}}
-    <main id="main">
-        {{#page}}
+<main class="main-wrap">
+  {{!-- Everything inside the #post tags pulls data from the post --}}
+  {{#page}}
             <div>
                 <h2>{{title}}</h2>
                 {{content}}
             </div>
-        {{/page}}
-    </main>
+  {{/page}}
+</main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
